@@ -6,11 +6,13 @@ import SignUp from './pages/SignUp'
 import Dashboard from './pages/Dashboard'
 
 import React from "react";
+import Header from "./Components/Header";
 
 export default function App() {
   return (
     <>
       <BrowserRouter>
+      <Header className="border-b-2"/>
         <Routes>
           <Route path="/" element={<Home/>}/>
           <Route path="/about" element={<About/>}/>
