@@ -1,10 +1,11 @@
 import express from "express";
 import mongoose from "mongoose";
+import dotenv from 'dotenv';
+
+dotenv.config();
 
 mongoose
-  .connect(
-    "mongodb+srv://yodha_akkineni:yodha_akkineni@yodha-blog.tmnu5g1.mongodb.net/blog_DB",
-  )
+  .connect(process.env.MONGO)
   .then(() => {
     console.log("Succesfully connected");
   })
